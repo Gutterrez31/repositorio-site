@@ -1,0 +1,335 @@
+/* Reset básico */
+body, h1, h2, p, ul {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* Estilos gerais */
+body {
+    line-height: 1.6;
+    color: #333;
+    background: #f4f4f4; /* Fundo claro para a página */
+}
+
+/* Cabeçalho */
+header {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens se movam para a linha seguinte em telas pequenas */
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff; /* Fundo branco para o cabeçalho */
+    border-bottom: 1px solid #ddd;
+}
+
+header .logo {
+    flex: 1;
+}
+
+header .logo img {
+    max-width: 150px; /* Limita o tamanho do logo */
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    flex: 2;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1em;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+header .social-media {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+header .social-media a {
+    margin-left: 10px;
+}
+
+header .social-media img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Slider de Vídeos */
+.slider {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+.slider-container {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slider-item {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.slider-item iframe {
+    width: 100%;
+    height: 315px; /* Ajuste a altura conforme necessário */
+    border: none;
+}
+
+/* Botões do Slider */
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+    z-index: 10; /* Garante que o botão fique acima de outros elementos */
+}
+
+.slider-btn.prev {
+    left: 10px;
+}
+
+.slider-btn.next {
+    right: 10px;
+}
+
+/* Avatares dos Instrutores */
+.instructors {
+    padding: 20px;
+    background-color: #fff;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.instructors h2, .instructors h3 {
+    text-align: center;
+    color: #a80c0c;
+}
+
+.instructors h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.instructors h3 {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.avatars {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.avatar-container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.avatar {
+    width: 80px; /* Tamanho menor */
+    height: 80px; /* Tamanho menor */
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid brown; /* Borda ao redor do avatar */
+    margin-bottom: 10px; /* Espaço abaixo do avatar */
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.social-links {
+    display: flex;
+    gap: 5px; /* Espaço entre ícones sociais */
+}
+
+.social-links a {
+    display: inline-block;
+}
+
+.social-icon {
+    width: 20px;
+    height: 20px;
+}
+
+/* Seção Gemini IA */
+.gemini-info {
+    padding: 20px;
+    background-color: #fff; /* Fundo branco para a seção */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gemini-info h1, .gemini-info h2 {
+    color: #a80c0c;
+}
+
+.gemini-info h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.gemini-info h2 {
+    font-size: 1.5em;
+    margin-top: 20px;
+}
+
+.gemini-info p, .gemini-info ul {
+    margin-bottom: 10px;
+}
+
+.gemini-info ul {
+    padding-left: 20px;
+}
+
+.gemini-info li {
+    margin-bottom: 10px;
+}
+
+/* Rodapé */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-size: 0.8em; /* Reduz o tamanho da fonte */
+}
+
+/* Media Queries */
+
+/* Estilos para dispositivos menores que 600px (móveis) */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header .logo {
+        margin-bottom: 10px;
+    }
+
+    header nav {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        margin: 0;
+    }
+
+    header nav ul li {
+        margin: 5px 0;
+    }
+
+    header .social-media {
+        margin-top: 10px;
+    }
+
+    .slider-item iframe {
+        height: 200px; /* Ajustar a altura conforme necessário */
+    }
+
+    .avatars {
+        gap: 10px;
+    }
+
+    .avatar {
+        width: 80px;
+        height: 80px;
+    }
+
+    /* Torna os botões do slider visíveis em dispositivos móveis */
+    .slider-btn {
+        display: flex;
+    }
+}
+
+/* Estilos para tablets entre 601px e 1024px */
+@media (min-width: 601px) and (max-width: 1024px) {
+    header {
+        padding: 10px;
+    }
+
+    header nav ul {
+        margin-right: 10px;
+    }
+
+    header nav ul li {
+        margin: 0 8px;
+    }
+
+    .slider {
+        width: 90%;
+    }
+
+    .slider-item iframe {
+        height: 250px; /* Ajustar a altura conforme necessário */
+    }
+
+    .avatars {
+        gap: 20px;
+    }
+
+    .avatar {
+        width: 90px;
+        height: 90px;
+    }
+}
+
+/* Estilos para telas maiores que 1024px (desktops) */
+@media (min-width: 1025px) {
+    .slider {
+        width: 80%;
+    }
+
+    .slider-item iframe {
+        height: 315px; /* Ajuste a altura conforme necessário */
+    }
+}

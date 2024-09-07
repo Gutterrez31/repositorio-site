@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon-icon1.png" type="image/x-icon">
+    <title>Informações sobre o Google Gemini</title>
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Trebuchet MS;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            overflow: hidden; /* Previne rolagem na tela */
+            padding: 20px; /* Espaço extra ao redor do contêiner */
+        }
+
+        .container {
+            position: relative;
+            max-width: 800px;
+            width: 100%;
+            height: 90vh; /* Ajuste a altura para permitir rolagem */
+            padding: 60px 20px 20px; /* Espaço para o ícone e conteúdo */
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow-y: auto; /* Permite rolagem vertical */
+        }
+
+        .audio-icon {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            cursor: pointer;
+            z-index: 10; /* Garante que o ícone esteja acima do conteúdo */
+        }
+
+        .audio-icon img {
+            width: 50px;
+        }
+
+        h1, h2 {
+            color: #333;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 16px;
+        }
+
+        @media (max-width: 600px) {
+            p {
+                font-size: 16px;
+            }
+
+            .audio-icon img {
+                width: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="audio-icon" id="audio-icon">
+            <img src="icon-audio.png" alt="Ícone de Áudio">
+        </div>
+        <div class="content">
+            <h1>Google Gemini</h1>
+            <p>O Google Gemini é a nova marca da família de modelos de linguagem desenvolvidos pelo Google, que antes eram conhecidos como Google Bard. O Gemini representa uma evolução significativa na capacidade dos modelos de IA da Google.</p>
+            <h2>Desenvolvimento e Criação</h2>
+            <p><strong>Nome e Fundação:</strong> O Google Gemini foi anunciado em dezembro de 2023. O nome "Gemini" foi escolhido para refletir a ideia de "dupla" ou "gêmeos", indicando o avanço e a dualidade na abordagem da IA, com foco em integração e capacidade aprimorada.</p>
+            <p><strong>Equipe e Criadores:</strong> A criação do Google Gemini envolveu uma equipe de engenheiros e pesquisadores da Google DeepMind, uma divisão dedicada à pesquisa em inteligência artificial. Embora os nomes específicos dos membros da equipe não sejam amplamente divulgados, a liderança de projetos de IA na Google DeepMind frequentemente inclui especialistas renomados em aprendizado de máquina e processamento de linguagem natural.</p>
+            <p><strong>Desenvolvimento:</strong> A transição de Bard para Gemini simboliza uma atualização significativa na tecnologia, com melhorias em precisão, capacidade de compreensão contextual e geração de texto. A equipe de desenvolvimento é composta por especialistas em IA e aprendizado profundo que trabalham em várias facetas da tecnologia.</p>
+            <h2>Características</h2>
+            <p>O Gemini é projetado para ser mais avançado que os modelos anteriores, oferecendo melhores capacidades de entendimento e geração de texto, maior contextualização, e respostas mais precisas e úteis. Ele é parte da contínua evolução da Google em fornecer ferramentas mais sofisticadas e úteis para usuários e desenvolvedores.</p>
+            <h2>Cronologia</h2>
+            <p><strong>Anúncio:</strong> Dezembro de 2023</p>
+            <p><strong>Fundação da Google DeepMind:</strong> A Google DeepMind, que é responsável pelo desenvolvimento de tecnologias como o Gemini, foi fundada como DeepMind Technologies em 2010 e adquirida pelo Google em 2015.</p>
+            <p>A criação do Google Gemini, como muitas inovações tecnológicas, é resultado do trabalho colaborativo de uma equipe de especialistas, engenheiros e cientistas. A equipe da Google DeepMind, que desenvolveu o Gemini, é composta por muitos outros profissionais além desses líderes, todos contribuindo com suas especialidades para o projeto.</p>
+            <h2>Detalhes sobre a Equipe</h2>
+            <p>Os detalhes específicos sobre os membros individuais da equipe que trabalharam diretamente no desenvolvimento do Google Gemini não são amplamente divulgados publicamente. A informação sobre quem exatamente participou pode ser bastante detalhada e frequentemente inclui:</p>
+            <p><strong>Líderes e Pesquisadores de Destaque:</strong> Embora os nomes de todos os colaboradores não sejam geralmente divulgados, a equipe responsável por desenvolvimentos significativos como o Gemini é frequentemente composta por pesquisadores de alto nível em inteligência artificial, aprendizado de máquina e processamento de linguagem natural. Nomes como Demis Hassabis, Shane Legg e Mustafa Suleyman são frequentemente associados aos principais projetos de DeepMind, mas a equipe que especificamente trabalhou no Gemini pode incluir muitos outros especialistas.</p>
+            <p><strong>Equipe da Google DeepMind:</strong> O Google Gemini foi desenvolvido pela Google DeepMind, uma divisão conhecida por seu trabalho inovador em IA. A equipe inclui engenheiros de software, cientistas de dados, especialistas em machine learning, linguistas computacionais e muitos outros profissionais com expertise em várias áreas da tecnologia.</p>
+            <p><strong>Publicações e Artigos:</strong> Frequentemente, detalhes mais específicos sobre a equipe envolvida em projetos de IA são compartilhados através de publicações acadêmicas e artigos técnicos. A Google DeepMind costuma publicar artigos sobre seus avanços em conferências e revistas científicas, onde os autores frequentemente incluem os nomes dos pesquisadores e suas contribuições.</p>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const audioIcon = document.getElementById('audio-icon');
+            const audio = new Audio('audio.mp3');
+
+            audioIcon.addEventListener('click', () => {
+                if (audio.paused) {
+                    audio.play();
+                    audioIcon.querySelector('img').src = 'icon-audio.png'; // Mude para o ícone quando o áudio estiver tocando
+                } else {
+                    audio.pause();
+                    audioIcon.querySelector('img').src = 'icon-audio.png'; // Mude para o ícone de áudio pausado
+                }
+            });
+
+            audio.addEventListener('ended', () => {
+                audioIcon.querySelector('img').src = 'icon-audio.png'; // Reverte para o ícone inicial quando o áudio termina
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre a Alura</title>
+    <style>
+        body {
+            font-family: Trebuchet MS;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #007acc;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        section {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            padding: 20px;
+        }
+
+        h1, h2 {
+            color: #007acc;
+        }
+
+        .audio-icon {
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            position: fixed;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+        }
+
+        .creator {
+            display: inline-block;
+            width: 100%;
+            max-width: 200px;
+            text-align: center;
+            margin: 10px;
+        }
+
+        .avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+            border: 3px solid rgb(10, 57, 212);
+        }
+
+        .socials a {
+            color: #007acc;
+            text-decoration: none;
+            margin: 0 5px;
+            font-size: 14px;
+        }
+
+        .socials a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: #007acc;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .credits {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .credits h2 {
+            color: #007acc;
+        }
+
+        .credits p {
+            margin: 10px 0;
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .creator {
+                width: 100%;
+                max-width: none;
+            }
+
+            header, footer {
+                padding: 15px;
+            }
+
+            .avatar {
+                width: 80px;
+                height: 80px;
+            }
+
+            .socials a {
+                font-size: 12px;
+            }
+
+            .audio-icon {
+                width: 40px;
+                height: 40px;
+                top: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1, footer p {
+                font-size: 16px;
+            }
+
+            .creator {
+                margin: 5px 0;
+            }
+
+            .avatar {
+                width: 70px;
+                height: 70px;
+            }
+
+            .socials a {
+                font-size: 10px;
+            }
+
+            .audio-icon {
+                width: 30px;
+                height: 30px;
+                top: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Sobre a Alura</h1>
+    </header>
+
+    <!-- Audio icon -->
+    <img src="icon-audio.png" alt="Play Audio" class="audio-icon" onclick="toggleAudio()">
+
+    <main>
+        <section class="intro">
+            <h2>A Alura</h2>
+            <p>A Alura é uma plataforma de educação online focada em cursos de tecnologia, design e negócios. Aqui estão algumas informações detalhadas sobre a Alura:</p>
+        </section>
+
+        <section class="history">
+            <h2>História e Criação</h2>
+            <p><strong>Criação:</strong> A Alura foi fundada em 2011.</p>
+            <p><strong>Fundadores:</strong> A plataforma foi criada por Gustavo Caetano e André M. Ciarelli, ambos com experiência significativa em tecnologia e educação.</p>
+        </section>
+
+        <section class="goal">
+            <h2>Objetivo e Visão</h2>
+            <p><strong>Objetivo:</strong> A Alura visa oferecer cursos e treinamentos de alta qualidade em áreas como desenvolvimento de software, design, marketing digital, dados, e gestão de projetos. Seu objetivo é ajudar profissionais a adquirir novas habilidades e se atualizar com as últimas tendências e tecnologias do mercado.</p>
+            <p><strong>Visão:</strong> A plataforma busca democratizar o acesso à educação de qualidade, permitindo que pessoas de diferentes origens e localidades possam aprender e se desenvolver profissionalmente.</p>
+        </section>
+
+        <section class="features">
+            <h2>Características e Ofertas</h2>
+            <p><strong>Cursos:</strong> A Alura oferece uma ampla gama de cursos, que vão desde programação e design até marketing e negócios. Os cursos são criados e ministrados por especialistas da indústria e incluem materiais como vídeos, quizzes e projetos práticos.</p>
+            <p><strong>Certificações:</strong> Ao completar cursos, os alunos recebem certificados que podem ser adicionados aos seus currículos e perfis profissionais.</p>
+            <p><strong>Plataforma:</strong> A Alura utiliza uma plataforma online que permite aos alunos acessar os cursos de qualquer lugar e a qualquer momento. A plataforma é projetada para ser interativa e intuitiva, com suporte a fóruns e comunidades para discussão e suporte.</p>
+            <p><strong>Metodologia:</strong> A Alura adota uma metodologia prática, com ênfase em aprender fazendo. Os cursos geralmente incluem projetos práticos que ajudam os alunos a aplicar o conhecimento adquirido.</p>
+        </section>
+
+        <section class="impact">
+            <h2>Impacto e Crescimento</h2>
+            <p><strong>Reconhecimento:</strong> Desde a sua criação, a Alura tem sido bem recebida por estudantes e profissionais, especialmente no Brasil e na América Latina. A plataforma é conhecida por sua qualidade de ensino e abordagem prática.</p>
+            <p><strong>Expansão:</strong> A Alura tem expandido continuamente sua oferta de cursos e melhorado sua plataforma, adaptando-se às necessidades do mercado e às novas tecnologias.</p>
+        </section>
+
+        <section class="community">
+            <h2>Apoio e Comunidade</h2>
+            <p><strong>Comunidade:</strong> A Alura promove uma comunidade ativa de alunos e profissionais que interagem por meio de fóruns, grupos de discussão e eventos online.</p>
+            <p><strong>Suporte:</strong> Oferece suporte técnico e pedagógico para ajudar os alunos a tirar o máximo proveito dos cursos.</p>
+        </section>
+
+        <section class="founders">
+            <h2>Fundadores</h2>
+            <div class="creator">
+                <img src="gustavo-caetano.jpeg" alt="Gustavo Caetano" class="avatar">
+                <h3>Gustavo Caetano</h3>
+                <div class="socials">
+                    <a href="https://twitter.com/gustavo" target="_blank">Twitter</a>
+                    <a href="https://linkedin.com/in/gustavo" target="_blank">LinkedIn</a>
+                </div>
+            </div>
+            <div class="creator">
+                <img src="Alura.jpg" alt="André M. Ciarelli" class="avatar">
+                <h3>André M. Ciarelli</h3>
+                <div class="socials">
+                    <a href="https://twitter.com/andre" target="_blank">Twitter</a>
+                    <a href="https://linkedin.com/in/andre" target="_blank">LinkedIn</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- New Credits Section -->
+        <section class="credits">
+            <h2>Créditos e Contato</h2>
+            <p><strong>Créditos:</strong> Para plataforma Alura.</p>
+            <p><strong>Site:</strong> <a href="https://www.alura.com.br" target="_blank">www.alura.com.br</a></p>
+            <p><strong>Email:</strong> <a href="mailto:contato@alura.com.br">contato@alura.com.br</a></p>
+            <p><strong>Telefone:</strong> +55 11 4003-1581</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; Todos os direitos reservados | Autor: AfanazioDev.</p>
+    </footer>
+
+    <!-- Audio element -->
+    <audio id="audio-player" src="" preload="auto"></audio>
+
+    <script>
+        let isPlaying = false;
+
+        function toggleAudio() {
+            const audio = document.getElementById('audio-player');
+            if (isPlaying) {
+                audio.pause();
+                isPlaying = false;
+            } else {
+                audio.src = 'audio4.mp3'; // Substitua pelo caminho do seu arquivo de áudio MP3 combinado
+                audio.play();
+                isPlaying = true;
+            }
+        }
+    </script>
+</body>
+</html>

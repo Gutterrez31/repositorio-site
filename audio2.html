@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Limitações do Gemini IA</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            line-height: 1.6;
+        }
+        .text-section {
+            margin: 20px;
+        }
+        .title-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .title-container h1, h2 {
+            margin: 0;
+            font-size: 24px;
+            color: rgb(151, 6, 67);
+        }
+        #read-text {
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 5px;
+            outline: none;
+        }
+        #read-text img {
+            width: 24px;
+            height: 24px;
+        }
+        /* Estilo para dispositivos móveis */
+        @media (max-width: 600px) {
+            .title-container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            #read-text {
+                margin-top: 10px; /* Espaço entre o título e o botão */
+            }
+            .title-container h1 {
+                font-size: 20px; /* Ajusta o tamanho da fonte do título */
+            }
+            #read-text img {
+                width: 20px;
+                height: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="text-section">
+        <div class="title-container">
+            <h1>Limitações do Gemini IA</h1>
+            <button id="read-text" aria-label="Reproduzir áudio">
+                <img src="imgs/audio.png" alt="Ícone de áudio">
+            </button>
+        </div>
+        <article id="text-to-read">
+            <p>
+                O Gemini, como qualquer outro modelo de linguagem de grande porte, apresenta algumas limitações. Embora seja uma ferramenta poderosa, é importante entender seus limites para utilizá-lo de forma eficaz e evitar interpretações errôneas.
+            </p>
+            <h2>Algumas das principais limitações do Gemini incluem:</h2>
+            <ul>
+                <li><strong>Falta de compreensão profunda:</strong> O Gemini é excelente em processar e gerar texto, mas não possui uma verdadeira compreensão do mundo. Ele pode gerar respostas coerentes e informativas, mas não "sabe" o que significa o texto que produz.</li>
+                <li><strong>Sensibilidade à entrada:</strong> A qualidade da saída do Gemini depende diretamente da qualidade da entrada. Entradas ambíguas, mal formuladas ou com informações falsas podem levar a resultados imprecisos ou até mesmo absurdos.</li>
+                <li><strong>Falta de contexto:</strong> Embora o Gemini possa processar grandes quantidades de texto, ele pode ter dificuldades em manter o contexto em conversas longas ou complexas.</li>
+                <li><strong>Viés nos dados de treinamento:</strong> Os modelos de linguagem são treinados em grandes conjuntos de dados. Se esses dados forem tendenciosos, o modelo também poderá gerar resultados tendenciosos.</li>
+                <li><strong>Capacidade limitada de raciocínio:</strong> O Gemini pode simular raciocínio, mas não possui a capacidade de raciocinar de forma verdadeiramente lógica ou crítica.</li>
+                <li><strong>Dificuldade com tarefas que exigem conhecimento do mundo real:</strong> Tarefas que exigem conhecimento específico de um domínio, como medicina ou direito, podem ser desafiadoras para o Gemini, pois ele não possui a experiência prática necessária.</li>
+            </ul>
+            <h2>Limitações específicas do Gemini:</h2>
+            <ul>
+                <li>Dificuldade com a localização precisa de objetos/textos em imagens.</li>
+                <li>Menos preciso no entendimento de imagens giradas.</li>
+                <li>Só é possível fornecer números aproximados da contagem de objetos, especialmente para objetos ocultos.</li>
+                <li>Inadequado para interpretar imagens médicas ou para fornecer aconselhamento médico.</li>
+                <li>Sem treinamento para a funcionalidade do chatbot ou para responder a perguntas em tom de conversa, e a performance é inferior em conversas de vários turnos.</li>
+            </ul>
+            <p>
+                É importante ressaltar que a pesquisa em IA está em constante evolução e as limitações dos modelos de linguagem estão sendo continuamente superadas. No entanto, é fundamental ter em mente essas limitações ao utilizar ferramentas como o Gemini.
+            </p>
+            <p>
+                Para mais informações sobre as limitações do Gemini, você pode consultar a documentação oficial: <a href="https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal/strengths-limits?hl=pt-br" target="_blank" rel="noopener noreferrer">Documentação Oficial</a>.
+            </p>
+        </article>
+    </section>
+
+    <script>
+        document.getElementById('read-text').addEventListener('click', function() {
+            const audio = new Audio('audio2.mp3'); // Substitua pelo caminho do seu arquivo de áudio
+            audio.play();
+        });
+    </script>
+</body>
+</html>

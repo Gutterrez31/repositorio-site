@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon-biografias.png" type="image/x-icon">
+    <title>biografias</title>
+    <style>
+        body {
+            font-family: Trebuchet MS;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            overflow-y: auto; /* Permite rolar verticalmente */
+        }
+
+        .container {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            padding: 20px;
+            max-width: 800px;
+            width: 100%;
+            box-sizing: border-box; /* Inclui o padding no cálculo da largura e altura */
+            margin: 20px; /* Margem para evitar que o conteúdo fique grudado nas bordas da tela */
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .avatar-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Centraliza o avatar, nome e ícone horizontalmente */
+            margin-bottom: 20px;
+            margin-top: 40px; /* Afastamento do topo */
+        }
+
+        .avatar-container {
+            position: relative; /* Necessário para a borda animada */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .avatar {
+            width: 120px; /* Tamanho do avatar */
+            height: 120px;
+            border-radius: 50%;
+            overflow: hidden;
+            background-color: #ddd; /* Cor de fundo se a imagem não carregar */
+            z-index: 1; /* Coloca a imagem acima da borda animada */
+        }
+
+        .avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Garante que a imagem preencha o contêiner sem distorção */
+        }
+
+        .border-animation {
+            position: absolute;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 4px solid transparent; /* Borda base */
+            border-top: 4px solid #ff0000; /* Cor da borda animada */
+            animation: rotateBorder 2s linear infinite;
+            z-index: 0; /* Coloca a borda abaixo da imagem do avatar */
+        }
+
+        @keyframes rotateBorder {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        h2 {
+            margin: 10px 0;
+            font-size: 1.25em; /* Tamanho do texto do nome */
+            text-align: center; /* Centraliza o texto do nome */
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 10px; /* Espaço entre os ícones */
+            margin-top: 10px;
+        }
+
+        .social-icons a {
+            text-decoration: none;
+        }
+
+        .social-icons img {
+            width: 24px; /* Tamanho dos ícones */
+            height: 24px;
+        }
+
+        .bio {
+            text-align: left; /* Alinha o texto da biografia à esquerda */
+            margin-bottom: 20px;
+        }
+
+        .bio p {
+            margin: 8px 0; /* Ajustado para diminuir a margem */
+            line-height: 1.4; /* Ajustado para melhor legibilidade */
+            font-size: 0.9em; /* Diminuído o tamanho do texto da biografia */
+        }
+
+        .video-grid {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .video {
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .video iframe {
+            width: 100%;
+            height: 315px; /* Altura padrão para vídeos do YouTube */
+            border: none;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Seção da Rafaella Ballerini -->
+        <div class="section">
+            <div class="avatar-section">
+                <div class="avatar-container">
+                    <div class="avatar">
+                        <!-- Substitua o URL abaixo pelo caminho correto da imagem -->
+                        <img src="rafaballerini.jpeg" alt="Rafaella Ballerini">
+                    </div>
+                    <div class="border-animation"></div>
+                </div>
+                <h2>Rafaella Ballerini</h2>
+                <div class="social-icons">
+                    <a href="https://www.youtube.com/@rafaellaballerini" target="_blank">
+                        <!-- Substitua o URL abaixo pelo caminho correto do ícone do YouTube -->
+                        <img src="youtube-icon.png" alt="YouTube">
+                    </a>
+                    <a href="https://www.instagram.com/rafaballerini/" target="_blank">
+                        <!-- Substitua o URL abaixo pelo caminho correto do ícone do Instagram -->
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+                    </a>
+                </div>
+            </div>
+            <div class="bio">
+                <p>
+                    Rafaella Ballerini é uma desenvolvedora e programadora brasileira que se destaca também como criadora de conteúdo no YouTube. Ela é conhecida por sua atuação na área de tecnologia e programação, onde compartilha seu conhecimento e experiência com uma audiência ampla, ajudando a democratizar o acesso a informações técnicas e educativas.
+                </p>
+                <p>
+                    Além de seu trabalho como criadora de conteúdo, Rafaella Ballerini é uma das colaboradoras da Alura, uma plataforma de educação online focada em tecnologia e desenvolvimento profissional. Na Alura, ela contribui com cursos e materiais voltados para programação e desenvolvimento de software, ajudando a formar novos profissionais na área.
+                </p>
+                <p>
+                    Se você estiver interessado em aprender mais sobre programação, desenvolvimento de software ou outras áreas tecnológicas, os vídeos e cursos oferecidos por Rafaella Ballerini podem ser uma excelente fonte de aprendizado e inspiração.
+                </p>
+            </div>
+            <div class="video-grid">
+                <div class="video">
+                    <!-- Substitua o VIDEO_ID abaixo pelo ID do vídeo do YouTube -->
+                    <iframe src="https://www.youtube.com/embed/pkH6XxH57O8" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+
+        <!-- Seção do Luciano Martins -->
+        <div class="section">
+            <div class="avatar-section">
+                <div class="avatar-container">
+                    <div class="avatar">
+                        <!-- Substitua o URL abaixo pelo caminho correto da imagem -->
+                        <img src="lucianomartins.jpeg" alt="Luciano Martins">
+                    </div>
+                    <div class="border-animation"></div>
+                </div>
+                <h2>Luciano Martins</h2>
+                <div class="social-icons">
+                    <a href="https://www.twitter.com/lucianomartins" target="_blank">
+                        <!-- Substitua o URL abaixo pelo caminho correto do ícone do Twitter -->
+                        <img src="twitter-x-icon.png" alt="Twitter">
+                    </a>
+                    <a href="https://www.linkedin.com/in/lucianomartins" target="_blank">
+                        <!-- Substitua o URL abaixo pelo caminho correto do ícone do LinkedIn -->
+                        <img src="linkedin-icon.png" alt="LinkedIn">
+                    </a>
+                </div>
+            </div>
+            <div class="bio">
+                <p>
+                    Luciano Martins é Developer Advocate na Google IA, com foco em tecnologias de inteligência artificial e aprendizado de máquina. Com uma vasta experiência na indústria de tecnologia, Luciano se destaca por seu trabalho em promover e educar sobre novas ferramentas e técnicas na área de IA.
+                </p>
+                <p>
+                    Em seu papel na Google, Luciano Martins trabalha para conectar a comunidade de desenvolvedores com as inovações mais recentes da Google, oferecendo suporte e orientações sobre como integrar tecnologias de IA em projetos diversos.
+                </p>
+                <p>
+                    A paixão de Luciano por tecnologia é evidenciada em suas contribuições para a comunidade de desenvolvedores, onde ele compartilha seu conhecimento através de palestras, workshops e outras formas de engajamento educacional.
+                </p>
+            </div>
+            <div class="video-grid">
+                <div class="video">
+                    <!-- Substitua o VIDEO_ID abaixo pelo ID do vídeo do YouTube -->
+                    <iframe src="https://www.youtube.com/embed/4vIGQ2TyySM" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+
+        <!-- Seção do Guilherme Lima -->
+        <div class="section">
+            <div class="avatar-section">
+                <div class="avatar-container">
+                    <div class="avatar">
+                        <!-- Substitua o URL abaixo pelo caminho correto da imagem -->
+                        <img src="guilhermeonrails.jpeg" alt="Guilherme Lima">
+                    </div>
+                    <div class="border-animation"></div>
+                </div>
+                <h2>Guilherme Lima</h2>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/guilherme_lima" target="_blank">
+                        <!-- Substitua o URL abaixo pelo caminho correto do ícone do Instagram -->
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+                    </a>
+                </div>
+            </div>
+            <div class="bio">
+                <p>
+                    Guilherme Lima é Tech Educator e Professor na Alura e na USP. Ele é conhecido por sua expertise em tecnologia e educação, contribuindo significativamente para a formação de profissionais de tecnologia em várias plataformas.
+                </p>
+                <p>
+                    Na Alura, Guilherme Lima ministra cursos e produz conteúdos educativos focados em tecnologia e desenvolvimento de software. Na USP, ele atua como professor, oferecendo uma educação de alta qualidade para futuros especialistas da área.
+                </p>
+                <p>
+                    A experiência de Guilherme em ambas as instituições lhe permite oferecer uma visão abrangente e prática sobre o setor de tecnologia, ajudando a moldar a próxima geração de profissionais.
+                </p>
+            </div>
+            <div class="video-grid">
+                <div class="video">
+                    <!-- Substitua o VIDEO_ID abaixo pelo ID do vídeo do YouTube -->
+                    <iframe src="https://www.youtube.com/embed/DiXGS5TYeBE" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
